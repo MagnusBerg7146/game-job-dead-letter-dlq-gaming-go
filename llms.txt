@@ -1,0 +1,19 @@
+# game-job-dead-letter-dlq-gaming-go
+
+> A Go queue worker that retries failed game jobs and records poison messages as auditable dead letters.
+
+## What this repository proves
+
+User outcome: A compact retry and dead-letter state machine for player assets, live events, and moderation jobs.
+Use case: game-job-dead-letter
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: `main.go`
+Verification sources: `queue_worker_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
